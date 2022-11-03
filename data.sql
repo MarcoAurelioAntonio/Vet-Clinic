@@ -27,3 +27,5 @@ VALUES
 ('Boarmon', DATE '2005 06 07', 20.4, true, 7),
 ('Blossom', DATE '1998 10 13', 17, true, 3),
 ('Ditto', DATE '2022 05 14', 22, true, 4);
+
+/* wednesday */
