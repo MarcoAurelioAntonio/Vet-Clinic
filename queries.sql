@@ -58,10 +58,6 @@ SELECT species, AVG(escape_attempts) AS "Average_Escape" FROM animals WHERE date
 
 /* wednesday */
 
-alter table animals drop column species; /*DELETE COLUMN species*/
-alter table animals add column species_id INT NULL REFERENCES species(id) ON DELETE CASCADE; /*ADD COLUMN species_id, which is a foreign key referencing species table*/
-alter table animals add column owner_id INT NULL REFERENCES owners(id) ON DELETE CASCADE; /*ADD COLUMN owner_id, which is a foreign key referencing owners table*/
-
 /* Write queries (using JOIN) to answer the following questions */
 SELECT * FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Melody Pond';
 SELECT * FROM animals a JOIN species s ON s.id = a.species_id WHERE s.name = 'Pokemon';

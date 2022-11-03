@@ -24,14 +24,6 @@ CREATE TABLE species (
 	name VARCHAR(100) NOT NULL
 );
 
-/*Modify table */
-CREATE TABLE animals (
-  id BIGSERIAL NOT NULL PRIMARY KEY,
-  name varchar(100) NOT NULL,
-  date_of_birth DATE NOT NULL,
-  escape_attempts INT NOT NULL,
-  neutered BOOLEAN NOT NULL,
-  weight_kg DOUBLE PRECISION NOT NULL
-  species_id INT NULL REFERENCES species(id) ON DELETE CASCADE,
-  owner_id INT NULL REFERENCES owners(id) ON DELETE CASCADE,
-);
+alter table animals drop column species; /*DELETE COLUMN species*/
+alter table animals add column species_id INT NULL REFERENCES species(id) ON DELETE CASCADE; /*ADD COLUMN species_id, which is a foreign key referencing species table*/
+alter table animals add column owner_id INT NULL REFERENCES owners(id) ON DELETE CASCADE; /*ADD COLUMN owner_id, which is a foreign key referencing owners table*/
