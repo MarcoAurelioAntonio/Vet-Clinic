@@ -49,16 +49,18 @@ SELECT * FROM animals ORDER BY id;
 
 /* Aggregates */
 SELECT * from animals;
-SELECT COUNT(*) AS "Animals_Count" FROM animals;
-SELECT COUNT(*) AS "Escapee_Animals_Count" FROM animals WHERE escape_attempts = 0;
-SELECT AVG(weight_kg) AS "Average_Animal_Weight" FROM animals;
-SELECT neutered, SUM(escape_attempts) AS "All_Escapes" FROM animals GROUP BY neutered;
-SELECT species, MAX(weight_kg) AS "Maximum Weight", MIN(weight_kg) AS "Minimum Weight" FROM animals GROUP BY species;
+SELECT COUNT(*) AS "Animals_Count" FROM animals; /* select count(*) from animals; */
+SELECT COUNT(*) AS "Escapee_Animals_Count" FROM animals WHERE escape_attempts = 0; /* select count(*) from animals where escape_attempts = 0; */
+SELECT AVG(weight_kg) AS "Average_Animal_Weight" FROM animals; /* select avg(weight_kg) from animals; */
+SELECT neutered, SUM(escape_attempts) AS "All_Escapes" FROM animals GROUP BY neutered; /* GROUP BY neutered is used to group the results by neutered column */
+SELECT species, MAX(weight_kg) AS "Maximum Weight", MIN(weight_kg) AS "Minimum Weight" FROM animals GROUP BY species; /* GROUP BY species is used to group the results by species column */
 SELECT species, AVG(escape_attempts) AS "Average_Escape" FROM animals WHERE date_of_birth BETWEEN DATE '1990-01-01' AND '2000-12-31' GROUP BY species;
 
-/* wednesday */
-/* Write queries (using JOIN) to answer the following questions */
-SELECT * FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Melody Pond';
+/* Wednesday */
+/* write queries (using JOIN) to answer the required questions */
+
+/* select * from animals a join owners o on o.id = a.owner_id where o.full_name = 'Melody Pond'; */
+SELECT * FROM animals a JOIN owners o ON o.id = a.owner_id WHERE o.full_name = 'Melody Pond'; 
 SELECT * FROM animals a JOIN species s ON s.id = a.species_id WHERE s.name = 'Pokemon';
 SELECT full_name AS "Owner", a.name AS "Animal" FROM animals a RIGHT JOIN owners o ON o.id = a.owner_id;
 SELECT COUNT(a.name) AS "Number of Animals", s.name AS "Species" FROM animals a JOIN species s ON s.id = a.species_id GROUP BY s.name;
