@@ -84,3 +84,6 @@ SELECT ve.name AS "Vet's Name", s.name AS "Animal Type", COUNT(s.name) AS "N_o S
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
 -- After Modifications
 EXPLAIN ANALYZE SELECT visit_count FROM animals WHERE id = 4;
+-- Second query
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+

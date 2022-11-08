@@ -49,4 +49,7 @@ CREATE TABLE visits (
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 ALTER TABLE animals
-ADD COLUMN visit_count;
+ADD COLUMN visit_count INT;
+
+CREATE INDEX vet_index ON visits(vet_id ASC);
+
