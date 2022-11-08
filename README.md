@@ -1,7 +1,7 @@
-# curriculum-databases-projects-template
+# curriculum-databases-projects
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+
+![791e0ca6-cca5-4870-a4b0-59e7a25ce136](https://user-images.githubusercontent.com/99001924/200673301-ddcf865b-6917-4140-b9b4-83b642ed5ab7.jpg)
 
 
 ## Getting Started
@@ -15,17 +15,17 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 Gustavo Porcilio.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@MarcoAurelioAntonio](https://github.com/MarcoAurelioAntonio)
+- Twitter: [@gustavoporcilio](https://twitter.com/gustavoporcilio)
+- LinkedIn: [Gustavo Porcilio](https://www.linkedin.com/in/gustavo-porcilio-4496a223a/)
 
-👤 **Author2**
+👤 Peter Beshara.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Peter1907](https://github.com/Peter1907)
+- Twitter: [@Peter_Beshara_](https://twitter.com/Peter_Beshara_)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/peter-beshara-b33681241/)
 
 ## 🤝 Contributing
 
