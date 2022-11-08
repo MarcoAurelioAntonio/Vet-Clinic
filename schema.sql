@@ -47,3 +47,6 @@ CREATE TABLE visits (
 
 /* Week 2 */
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE animals
+ADD COLUMN visit_count;

@@ -109,3 +109,8 @@ VALUES
 /*WEEK 2*/
 INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
+
+UPDATE animals
+SET visit_count = count
+FROM (select COUNT(*), animal_id FROM visits GROUP BY animal_id) AS total
+WHERE animals.id = total.animal_id;
