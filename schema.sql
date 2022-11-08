@@ -44,3 +44,13 @@ CREATE TABLE visits (
   vet_id INT NULL REFERENCES vets(id) ON DELETE CASCADE,
   date_of_visit DATE NOT NULL
 );
+
+/* Week 2 */
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+ALTER TABLE animals
+ADD COLUMN visit_count INT;
+
+CREATE INDEX vet_index ON visits(vet_id ASC);
+
+CREATE INDEX email_index ON owners(email ASC);
