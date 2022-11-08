@@ -53,3 +53,4 @@ ADD COLUMN visit_count INT;
 
 CREATE INDEX vet_index ON visits(vet_id ASC);
 
+CREATE INDEX email_index ON owners(email ASC);
