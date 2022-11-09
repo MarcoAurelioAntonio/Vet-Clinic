@@ -10,6 +10,7 @@ CREATE TABLE medical_histories (
     status VARCHAR(100) NOT NULL,
     patient_id INT NULL REFERENCES patients(id) ON DELETE CASCADE
 )
+CREATE INDEX his_patients_index ON medical_histories(patient_id);
 
 CREATE TABLE treatments (
     id BIGSERIAL NOT NULL PRIMARY KEY,
@@ -24,6 +25,7 @@ CREATE TABLE invoices (
     payed_at timestamp,
     medical_history_id INT REFERENCES medical_histories(id) ON DELETE CASCADE
 )
+CREATE INDEX inv_history ON invoices(medical_history_id);
 
 CREATE TABLE invoice_items (
     id BIGSERIAL NOT NULL PRIMARY kEY,
@@ -33,12 +35,12 @@ CREATE TABLE invoice_items (
     invoice_id INT REFERENCES invoices(id) ON DELETE CASCADE,
     treatment_id INT REFERENCES treatments(id) ON DELETE CASCADE
 )
+CREATE INDEX inv_id_index ON invoice_items(invoice_id);
+CREATE INDEX inv_treatment_index ON invoice_items(treatment_id);
 
 CREATE TABLE patient_file (
     history_id INT REFERENCES medical_histories(id),
     treatment_id INT REFERENCES treatments(id)
 )
-
-CREATE INDEX invoice_items_id ON invoice_items(id);
-CREATE INDEX patient_file_history_id ON patient_file(history_id);
-CREATE INDEX patient_file_treatment_id ON patient_file(treatment_id);
+CREATE INDEX file_history_index ON patient_file(history_id);
+CREATE INDEX file_treatment_index ON patient_file(treatment_id); 
