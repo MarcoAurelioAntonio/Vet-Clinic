@@ -38,3 +38,7 @@ CREATE TABLE patient_file (
     history_id INT REFERENCES medical_histories(id),
     treatment_id INT REFERENCES treatments(id)
 )
+
+CREATE INDEX invoice_items_id ON invoice_items(id);
+CREATE INDEX patient_file_history_id ON patient_file(history_id);
+CREATE INDEX patient_file_treatment_id ON patient_file(treatment_id);
